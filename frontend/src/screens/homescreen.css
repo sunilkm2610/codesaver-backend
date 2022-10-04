@@ -1,0 +1,14 @@
+.home-container {
+  display: flex;
+  /* flex-direction: row; */
+  width: 100vw;
+  background: black;
+  color: white;
+}
+.savedcode {
+  flex: 20%;
+  /* background-color: ; */
+}
+.editor {
+  flex: 80%;
+}
