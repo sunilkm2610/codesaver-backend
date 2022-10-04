@@ -3,7 +3,7 @@ const express = require("express");
 var cors = require("cors");
 const userRouter = require("./routes/user.route");
 const solutionRouter = require("./routes/solution.route");
-const path = require(path);
+const path = require("path");
 
 const app = express();
 dotenv.config();
@@ -16,7 +16,6 @@ app.use("/api/solution", solutionRouter);
 
 const PORT = process.env.PORT || 4000;
 
-const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
 
