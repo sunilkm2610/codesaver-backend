@@ -24,13 +24,14 @@ const Solutions = () => {
     getData();
   }, []);
   return (
-    <div style={{ background: "black" }}>
+    <div style={{ background: "white" }}>
       {open ? (
         <LinearProgress />
       ) : (
         solutions.map((solution) => (
-          <div key={solution._id}>
+          <div key={solution._id} style={{ padding: "30px" }}>
             <SolutionCard data={solution} />
+            <hr />
           </div>
         ))
       )}

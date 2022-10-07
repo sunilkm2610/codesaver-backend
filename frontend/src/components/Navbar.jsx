@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [isAuth, isSetAuth] = useState(false);
@@ -22,13 +22,19 @@ const NavBar = () => {
         <div className="tabs">
           <ul>
             <li>
-              <Link to="/">ALL</Link>
+              <NavLink exact={true} to="/">
+                ALL
+              </NavLink>
             </li>
             <li>
-              <Link to="/my-solutions">YOUR</Link>
+              <NavLink exact={true} to="/my-solutions">
+                YOUR
+              </NavLink>
             </li>
             <li>
-              <Link to="/solutions/add">ADD</Link>
+              <NavLink exact={true} to="/solutions/add">
+                ADD
+              </NavLink>
             </li>
           </ul>
         </div>

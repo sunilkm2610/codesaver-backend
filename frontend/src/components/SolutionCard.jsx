@@ -33,7 +33,7 @@ export default function SolutionCard({ data }) {
   };
 
   return (
-    <Card sx={{ width: "70vw", margin: "10px auto" }}>
+    <Card sx={{ width: "70vw", margin: "auto" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -45,7 +45,9 @@ export default function SolutionCard({ data }) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={data.title === "" ? "No title found" : data.title}
+        title={`${data.user.name} | ${
+          data.title === "" ? "No title found" : data.title
+        }`}
         subheader={data.updatedAt}
       />
       <Editor value={data.code} height={"500px"} readOnly={true} />
